@@ -1,0 +1,94 @@
+@Exam_HostAddress = http://localhost:5202
+
+GET {{Exam_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+@CustomMiddleware_HostAddress = http://localhost:5202
+
+###
+
+GET  http://localhost:5202/customers/GetAllCustomer
+Content-Type: application/json
+username: jacopo1993
+password: jacopo1
+
+
+###
+
+GET  http://localhost:5202/customers/GetById/1
+Content-Type: application/json
+
+###
+
+DELETE   http://localhost:5202/customers/DeleteCustomer/1
+Content-Type: application/json
+
+###
+
+POST   http://localhost:5202/customers/CreateCustomer
+Content-Type: application/json
+username: jacopo1993
+password: jacopo1
+
+{
+    "Name": "Pietro",
+    "email": "pietro@gmail.com",
+    "UserName": "pietro1990",
+    "Password": "pietro2323",
+    "RoleId": 1
+}
+###
+
+PUT   http://localhost:5202/customers/UpdateCustomer/1
+Content-Type: application/json
+
+###
+
+GET  http://localhost:5202/books/GetAllbook
+Content-Type: application/json
+
+###
+
+GET  http://localhost:5202/books/GetById/1
+Content-Type: application/json
+
+###
+
+DELETE   http://localhost:5202/books/DeleteBook/1
+Content-Type: application/json
+
+###
+
+POST   http://localhost:5202/books/CreateBook
+Content-Type: application/json
+username: jacopo1993
+password: jacopo1
+
+{
+    "Title": "Title test admin role Jacopo",
+    "Body": "Title test admin role Jacopo"
+}
+
+###
+
+POST   http://localhost:5202/books/CreateBook
+Content-Type: application/json
+username: paolo0909
+password: paolo1
+
+{
+    "Title": "Title test admin role Paolo",
+    "Body": "Title test admin role Paolo"
+}
+
+###
+
+PUT   http://localhost:5202/books/UpdateBook/2
+Content-Type: application/json
+
+{
+    "Title": "Book 3545",
+    "Body": "This is book 3545"
+}
